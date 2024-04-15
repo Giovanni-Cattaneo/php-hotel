@@ -48,6 +48,14 @@ $hotels = [
 //     echo "<br>";
 // }
 
+var_dump($_GET);
+
+$filterName = $_GET["name"];
+
+$filterHotels = [];
+
+//var_dump($filteredName);
+
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +71,7 @@ $hotels = [
 <body>
 
     <form class="text-center mt-5" action="" method="get">
-        <input type="text" placeholder="Cerca un hotel">
+        <input type="text" name="name" placeholder="Cerca un hotel">
         <input type="submit" value="Cerca">
     </form>
 
