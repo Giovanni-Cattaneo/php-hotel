@@ -57,12 +57,13 @@ $hotels = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
 
     <?php foreach ($hotels as $hotel) { ?>
-        <div>
+        <div class="card">
             <p><?php echo $hotel['name']; ?></p>
             <p><?php echo $hotel['description']; ?></p>
             <p>Voto: <?php echo $hotel['vote']; ?>/5</p>
