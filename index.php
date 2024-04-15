@@ -62,15 +62,25 @@ $hotels = [
 
 <body>
 
-    <?php foreach ($hotels as $hotel) { ?>
-        <div class="card">
-            <p><?php echo $hotel['name']; ?></p>
-            <p><?php echo $hotel['description']; ?></p>
-            <p>Voto: <?php echo $hotel['vote']; ?>/5</p>
-            <p>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?>km</p>
-            <br>
+
+    <div class="container d-flex text-center">
+        <div class="row">
+            <?php foreach ($hotels as $hotel) { ?>
+                <div class="col d-flex gap-4">
+                    <div class="card p-3">
+                        <p><?php echo $hotel['name']; ?></p>
+                        <hr>
+                        <p><?php echo $hotel['description']; ?></p>
+                        <p>Voto: <?php echo $hotel['vote']; ?>/5</p>
+                        <p>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?>km</p>
+                        <br>
+                    </div>
+                <?php } ?>
+                </div>
+
         </div>
-    <?php } ?>
+
+    </div>
 
 </body>
 
