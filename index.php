@@ -39,3 +39,32 @@ $hotels = [
     ],
 
 ];
+
+foreach ($hotels as $key => $hotel) {
+    echo "<p>$hotel[name]</p>";
+    echo "<p>$hotel[description]</p>";
+    echo "<p>$hotel[parking]</p>";
+    echo "<p>$hotel[vote]</p>";
+    echo "<p>$hotel[distance_to_center]</p>";
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+</head>
+
+<body>
+
+    <?php foreach ($hotels as $key => $hotel) {
+    }
+    ?>
+
+</body>
+
+</html>
