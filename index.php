@@ -40,13 +40,13 @@ $hotels = [
 
 ];
 
-foreach ($hotels as $key => $hotel) {
-    echo "<p>$hotel[name]</p>";
-    echo "<p>$hotel[description]</p>";
-    echo "<p>$hotel[parking]</p>";
-    echo "<p>$hotel[vote]</p>";
-    echo "<p>$hotel[distance_to_center]</p>";
-}
+// foreach ($hotels as $key => $hotel) {
+//     echo "<p>$hotel[name]</p>";
+//     echo "<p>$hotel[description]</p>";
+//     echo "<p>Voto: $hotel[vote]/5</p>";
+//     echo "<p>Distanza dal centro: $hotel[distance_to_center]km</p>";
+//     echo "<br>";
+// }
 
 ?>
 
@@ -61,9 +61,15 @@ foreach ($hotels as $key => $hotel) {
 
 <body>
 
-    <?php foreach ($hotels as $key => $hotel) {
-    }
-    ?>
+    <?php foreach ($hotels as $hotel) { ?>
+        <div>
+            <p><?php echo $hotel['name']; ?></p>
+            <p><?php echo $hotel['description']; ?></p>
+            <p>Voto: <?php echo $hotel['vote']; ?>/5</p>
+            <p>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?>km</p>
+            <br>
+        </div>
+    <?php } ?>
 
 </body>
 
