@@ -62,8 +62,13 @@ $hotels = [
 
 <body>
 
+    <form class="text-center mt-5" action="" method="get">
+        <input type="text" placeholder="Cerca un hotel">
+        <input type="submit" value="Cerca">
+    </form>
 
-    <div class="container d-flex text-center">
+
+    <div class="container d-flex text-center mt-5">
         <div class="row">
             <?php foreach ($hotels as $hotel) { ?>
                 <div class="col d-flex gap-4">
