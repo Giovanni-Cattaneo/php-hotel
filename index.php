@@ -75,23 +75,28 @@ $filterHotels = [];
         <input type="submit" value="Cerca">
     </form>
 
-
-    <div class="container d-flex text-center mt-5">
-        <div class="row">
-            <?php foreach ($hotels as $hotel) { ?>
-                <div class="col d-flex gap-4">
-                    <div class="card p-3">
-                        <p><?php echo $hotel['name']; ?></p>
-                        <hr>
-                        <p><?php echo $hotel['description']; ?></p>
-                        <p>Voto: <?php echo $hotel['vote']; ?>/5</p>
-                        <p>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?>km</p>
-                        <br>
-                    </div>
+    <div class="container d-flex mt-5 justify-content-center ">
+        <table class="w-75 mx-auto border">
+            <thead class="border-bottom">
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Valutazione</th>
+                    <th>Distanza dal centro</th>
+                </tr>
+            </thead>
+            <tbody class="w-100 ">
+                <?php foreach ($hotels as $hotel) { ?>
+                    <tr class="border">
+                        <td><?php echo $hotel['name']; ?></td>
+                        <td><?php echo $hotel['description']; ?></td>
+                        <td>Voto: <?php echo $hotel['vote']; ?>/5</td>
+                        <td>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?>km</td>
+                    </tr>
                 <?php } ?>
-                </div>
-
-        </div>
+            </tbody>
+        </table>
+    </div>
 
     </div>
 
