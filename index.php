@@ -50,9 +50,16 @@ $hotels = [
 
 var_dump($_GET);
 
+function parking($hotel)
+{
+    return $hotel['parking'];
+}
+
+$filteredHotels = array_filter($hotels, 'parking');
+
 $filterName = $_GET["name"];
 
-$filterHotels = [];
+// $filterHotels = [];
 
 //var_dump($filteredName);
 
@@ -71,7 +78,8 @@ $filterHotels = [];
 <body>
 
     <form class="text-center mt-5" action="" method="get">
-        <input type="text" name="name" placeholder="Cerca un hotel">
+        <input type="checkbox" name="name">
+        <span>Filtra per parcheggio</span>
         <input type="submit" value="Cerca">
     </form>
 
